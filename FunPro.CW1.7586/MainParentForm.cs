@@ -11,27 +11,34 @@ namespace FunPro.CW1._7586
         }
 
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CreateNewTicketToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = new AboutForm();
-            form.ShowDialog();
+            new EditTicketForm().CreateNewTicket();
+        }
+        private void ListAllTicketsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AllForms.GetForm<EditTicketForm>().Show();
+        }
+        private void CreateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new EditSprintForm().CreateNewSprint();
         }
 
-        private void ParentForm_Load(object sender, EventArgs e)
+        private void ListAllSprintsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            AllForms.GetForm<EditSprintForm>().Show();
         }
 
-        private void AllTicketsToolStripMenuItem_Click(object sender, EventArgs e) => AllForms.GetForm<ListOfTicketsForm>().Show();
-
-        private void allSprintsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AllForms.GetForm<ListOfSprintsForm>().Show();
+            var x = new AboutForm();
+            x.ShowDialog();
+
         }
 
 
