@@ -119,6 +119,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.BindingSource mainParentFormBindingSource;
         private System.Windows.Forms.BindingSource programBindingSource;
     }

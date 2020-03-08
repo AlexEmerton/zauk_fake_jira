@@ -227,3 +227,4 @@ project.lock.json
 #####
 *.csproj
 FunPro.CW1.7586.DAL/FunPro.CW1.7586.DAL.csproj
+*.csproj
