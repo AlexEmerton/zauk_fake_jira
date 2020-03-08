@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-public enum ByAttribute
+﻿namespace FunPro.CW1._7586.DAL
 {
-  
-    Priority,
-    Status,
-    ID
-    ///adapted from FunPro lectures
+    public enum ByAttribute
+    {
+        Priority,
+        Status,
+        Id
+    }
 }
-

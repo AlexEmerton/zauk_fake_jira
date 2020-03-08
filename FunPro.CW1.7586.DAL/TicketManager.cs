@@ -15,7 +15,7 @@ namespace FunPro.CW1._7586.DAL
             {
                 var sql = $@"
                     INSERT INTO ticket (summary, description, estimation, priority, status, sprint_id) 
-                    VALUES('{t.Summary}', '{t.Description}', {t.Estimation}, '{t.Priority}', '{t.Status}', {t.Sprint.Id})";
+                    VALUES('{t.Summary}', '{t.Description}', {t.Estimation}, '{t.Priority}', '{t.Status}', {t.Sprint.ID})";
                 var command = new SqlCeCommand(sql, connection);
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -46,7 +46,7 @@ namespace FunPro.CW1._7586.DAL
                     estimation = {t.Estimation}, 
                     priority = '{t.Priority}', 
                     status = '{t.Status}', 
-                    sprint_id = {t.Sprint.Id}
+                    sprint_id = {t.Sprint.ID}
                     WHERE id = {t.Id}";
                 var command = new SqlCeCommand(sql, connection);
                 connection.Open();

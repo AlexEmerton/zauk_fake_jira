@@ -6,56 +6,47 @@ using System.Threading.Tasks;
 
 namespace FunPro.CW1._7586.DAL
 {
-    public class ListOfTickets
+    public class TicketList
     {
-
-
-        private List<Ticket> GetAllTickets => new AllTickets().GetAll();
-
-        public List<Ticket> Sort(ByAttribute attribute)
+        public List<Ticket> GetAllTickets()
         {
-            var result = AllTickets;
+            return new TicketManager().GetAll();
+        }
 
+
+        public List<Ticket> GetBacklogTickets()
+        {
+            return new TicketManager().GetBacklog();
+        }
+
+
+
+        public List<Ticket> SortLinq(ByAttribute attribute)
+        {
+            Dictionary<string, int> OrderP = new Dictionary<string, int> { { "Showstopper", 0 }, { "High", 1 }, { "Normal", 2 }, { "Low", 3 } };
             switch (attribute)
             {
-                case ByAttribute.Priority:
-                    result.Sort(new ByPriorityComparer());
-                    return result;
                 case ByAttribute.Status:
-                    result.Sort(new ByStatusComparer());
-                    return result;
+                    return null;
+                case ByAttribute.Priority:
+                    return GetAllTickets().OrderBy(a => a.Priority).ToList();
             }
 
+            //if we are here - something went wrong
             return null;
         }
 
-        private class ByPriorityComparer : IComparer<Ticket>
-        {
-            public int Compare(Ticket x, Ticket y)
-            {
-                return string.Compare(x.Priority, y.Priority);
-            }
-        }
 
-        private class ByStatusComparer : IComparer<Ticket>
-        {
-            public int Compare(Ticket x, Ticket y)
-            {
-                return string.Compare(x.Status, y.Status);
-            }
-        }
 
         public List<Ticket> Search(string value, ByAttribute attribute)
         {
             switch (attribute)
             {
-                case ByAttribute.Priority:
-                    return AllTickets.Where(a => a.Priority.ToUpper().Contains(value.ToUpper())).ToList();
-                case ByAttribute.Status:
-                    return AllTickets.Where(a => a.Status.ToUpper().Contains(value.ToUpper())).ToList();
+                case ByAttribute.Id:
+                    return GetAllTickets().Where(a => a.Id.ToString().Contains(value)).ToList();
             }
 
-            //hmm. Seems that something is going wrong
+            //if we are here - something went wrong
             return null;
         }
     }
