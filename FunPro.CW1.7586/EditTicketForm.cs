@@ -15,7 +15,7 @@ namespace FunPro.CW1._7586
 
         private void EditTicketForm_Load(object sender, EventArgs e)
         {
-            MdiParent = AllForms.GetForm<MainParentForm>();
+            MdiParent = AllForms.GetForm<ParentForm>();
         }
 
 
@@ -31,7 +31,7 @@ namespace FunPro.CW1._7586
             Mode = FormMode.CreateNew;
             Ticket = new Ticket();
             InitializeControls();
-            MdiParent = AllForms.GetForm<MainParentForm>();
+            MdiParent = AllForms.GetForm<ParentForm>();
             Show();
         }
 
@@ -43,7 +43,7 @@ namespace FunPro.CW1._7586
             Ticket = ticket;
             InitializeControls();
             ShowTicketInControls();
-            MdiParent = AllForms.GetForm<MainParentForm>();
+            MdiParent = AllForms.GetForm<ParentForm>();
             Show();
         }
 
@@ -58,13 +58,13 @@ namespace FunPro.CW1._7586
 
         private void ShowTicketInControls()
         {
-            var idSprint = Convert.ToInt32(cbxSprint.SelectedValue);
+            _ = Convert.ToInt32(cbxSprint.SelectedValue);
             tbxSummary.Text = Ticket.Summary;
             tbxDescription.Text = Ticket.Description;
             nudEstimation.Value = Ticket.Estimation;
             cbxPriority.SelectedValue = Ticket.Priority;
             cbxStatus.SelectedValue = Ticket.Status;
-            idSprint = Ticket.Sprint.ID;
+            _ = Ticket.Sprint.ID;
         }
 
 
@@ -82,14 +82,14 @@ namespace FunPro.CW1._7586
 
 
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
 
 
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             try
             {
