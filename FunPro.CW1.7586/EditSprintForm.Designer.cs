@@ -1,4 +1,4 @@
-﻿namespace FunPro.CW1._7586
+﻿namespace FunPro.CW1._7568
 {
     partial class EditSprintForm
     {
@@ -87,6 +87,7 @@
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // nudNoD
             // 
@@ -151,5 +152,6 @@
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.TextBox tbxStatus;
+        private System.Windows.Forms.DataGridView dgv;
     }
 }

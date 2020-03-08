@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace FunPro.CW1._7586.DAL
 {
@@ -10,12 +6,7 @@ namespace FunPro.CW1._7586.DAL
     {
         public List<Sprint> GetAllSprints()
         {
-            return new AllSprints().GetAll();
-        }
-
-        private List<Sprint> GetAll()
-        {
-            throw new NotImplementedException();
+            return new SprintManager().GetAll();
         }
     }
 }

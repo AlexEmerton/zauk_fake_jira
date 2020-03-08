@@ -59,7 +59,9 @@
     <Compile Include="EditSprintForm.Designer.cs">
       <DependentUpon>EditSprintForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditTicketForm.cs" />
+    <Compile Include="EditTicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EditTicketForm.Designer.cs">
       <DependentUpon>EditTicketForm.cs</DependentUpon>
     </Compile>
@@ -70,11 +72,11 @@
     <Compile Include="ListOfSprintsForm.Designer.cs">
       <DependentUpon>ListOfSprintsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListOfTicketsForm.cs">
+    <Compile Include="ListOfTicketForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListOfTicketsForm.Designer.cs">
-      <DependentUpon>ListOfTicketsForm.cs</DependentUpon>
+    <Compile Include="ListOfTicketForm.Designer.cs">
+      <DependentUpon>ListOfTicketForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainParentForm.cs">
       <SubType>Form</SubType>
@@ -92,9 +94,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListOfSprintsForm.resx">
       <DependentUpon>ListOfSprintsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListOfTicketsForm.resx">
-      <DependentUpon>ListOfTicketsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainParentForm.resx">
       <DependentUpon>MainParentForm.cs</DependentUpon>
@@ -123,6 +122,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FunPro.CW1.7586.DAL\FunPro.CW1.7586.DAL.csproj">
+      <Project>{43b88bf9-ffbb-4816-b11f-82b89692df8f}</Project>
+      <Name>FunPro.CW1.7586.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

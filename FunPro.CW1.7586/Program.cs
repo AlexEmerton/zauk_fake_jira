@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 
-
 namespace FunPro.CW1._7586
 {
     static class Program
@@ -14,14 +13,7 @@ namespace FunPro.CW1._7586
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainParentForm());
+            Application.Run(new ParentForm());
         }
-    }
-    
-     /////////????????? не уверен насчет ниржней строки
-    
-
-    internal class MainParentForm : Form
-    {
     }
 }
