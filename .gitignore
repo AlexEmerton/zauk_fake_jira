@@ -58,6 +58,7 @@ x64/
 *.log
 *.scc
 *.settings
+*.Designer.cs
 
 # OS generated files #
 .DS_Store*
