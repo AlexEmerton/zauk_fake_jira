@@ -59,6 +59,10 @@
     <Compile Include="EditSprintForm.Designer.cs">
       <DependentUpon>EditSprintForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditTicketForm.cs" />
+    <Compile Include="EditTicketForm.Designer.cs">
+      <DependentUpon>EditTicketForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMode.cs" />
     <Compile Include="ListOfSprintsForm.cs">
       <SubType>Form</SubType>
@@ -104,10 +108,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="FunPro.CW1._7586.Properties.Resources.datasource" />
-    <None Include="FunPro.CW1._7586.Properties.Settings.datasource" />
-    <None Include="MainParentForm.datasource" />
-    <None Include="Program.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
